@@ -1,2 +1,2 @@
-# Titanic-Dataset
+# Iris-Dataset
 A practice dataset I found somewhere. Report included.
