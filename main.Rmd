@@ -14,13 +14,35 @@ library(ggplot2)
 
 iris = iris
 ```
+ 
+# Introduction:
+This dataset is derived from [Fisher's](https://en.wikipedia.org/wiki/Iris_flower_data_set) findings. it's a pretty tiny dataset that includes measurements of *Iris* flowers across three species. The purpose of this report is to practice R,```ggplot2``` and rmarkdown basics.
 
-```{r}
+
+# Dataset structure and notes:
+```{r echo=FALSE}
+str(iris)
+```
+As seen, the dataset has an explicit structure of:
+
+Variable             | Data type
+---------------------|----------
+```Sepal.Length```   | Double
+```Sepal.Width```    | Double
+```Petal.Length```   | Double
+```Petal.Width```    | Double
+```Species```        | Factor
+
+The measurements are in **centimeters**
+
+
+
+
+# Visuals:
+```{r echo=FALSE}
 ggplot(iris, aes(x = Sepal.Length, y = Sepal.Width, color = Species)) +
   geom_point() +
   labs(x = "Sepal's Length",
        y = "Petal's Width",
        title = "Sepal's length vs. Petal's width across three species")
-  
-  
 ```
