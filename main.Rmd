@@ -1,0 +1,26 @@
+---
+title: "Iris Analysis"
+author: "Mohammad Boaisha"
+date: "10/11/2018"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(tidyverse)
+library(dplyr)
+library(tidyr)
+library(ggplot2)
+
+iris = iris
+```
+
+```{r}
+ggplot(iris, aes(x = Sepal.Length, y = Sepal.Width, color = Species)) +
+  geom_point() +
+  labs(x = "Sepal's Length",
+       y = "Petal's Width",
+       title = "Sepal's length vs. Petal's width across three species")
+  
+  
+```
