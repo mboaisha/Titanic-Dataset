@@ -49,3 +49,15 @@ ggplot(iris, aes(x = Sepal.Length, y = Sepal.Width, color = Species)) +
        y = "Petal's Width",
        title = "Sepal's length vs. Petal's width across three species")
 ```
+
+```{r}
+iris_filtered <- iris %>%
+  filter(Species == "virginica")
+
+ggplot(iris_filtered, aes(x = Sepal.Length, y = Petal.Width)) +
+  geom_count(color = "blue") +
+  geom_smooth(method = "loess", col ="red", se = FALSE) +
+  labs(x = "Sepal's Length",
+       y = "Petal's Width",
+       title = "Petal's width compared to sepal's length within virginica speices")
+```
